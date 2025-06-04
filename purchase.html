@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Purchase Complete – Esat</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "purchase",
+      ecommerce: {
+        transaction_id: "ESAT123456",
+        currency: "EUR",
+        value: 49.99,
+        tax: 4.99,
+        shipping: 5.00,
+        items: [{
+          item_id: "gs_jersey_2025",
+          item_name: "Galatasaray Jersey 2025",
+          item_category: "Football Shirts",
+          price: 49.99,
+          quantity: 1
+        }]
+      }
+    });
+  </script>
+  <!-- GTM -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T8SJMB2J');</script>
+</head>
+<body>
+  <h1>🎉 Thank you for your purchase, Esat!</h1>
+  <p>Your Galatasaray jersey is on its way. 🔥</p>
+  <a href="index.html">← Back to homepage</a>
+</body>
+</html>
