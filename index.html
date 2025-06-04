@@ -2,28 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>GTM Practice</title>
+  <title>GTM Practice – Esat</title>
 
-  <!-- Google Tag Manager -->
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T8SJMB2J');</script>
-<!-- End Google Tag Manager -->
+  <!-- GTM -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T8SJMB2J');</script>
   <!-- End GTM -->
 
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #fefae0;
+    }
+    h1 {
+      color: #c8102e;
+    }
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    #button-yellow { background-color: #ffcc00; color: black; }
+    #button-pink { background-color: #e83e8c; }
+    #button-gala { background-color: #a51c30; }
+    #button-cart { background-color: #007bff; }
+  </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8SJMB2J"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- GTM (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8SJMB2J"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End GTM -->
 
-  <h1>Hello Esat!</h1>
-<p>It's practice time. </p>
-  <div id="button-yellow"><a href="https://kruidvat.nl">This is a link to Kruidvat.nl</a></div>
-  <div id="button-pink"><a href="https://kruidvat.be">This is a link to Kruidvat.be</a></div>
+  <h1>Merhaba Esat! 👋</h1>
+  <p>Welcome to your GTM playground. Track it all!</p>
+
+  <a href="https://kruidvat.nl" class="button" id="button-yellow">Visit Kruidvat NL</a>
+  <a href="https://kruidvat.be" class="button" id="button-pink">Visit Kruidvat BE</a>
+  <a href="https://galatasaray.org" class="button" id="button-gala">Go to Galatasaray 🔥</a>
+
+  <br><br>
+
+  <button id="esat-click-me">Click Me!</button>
+  <br><br>
+
+  <form id="newsletter-form">
+    <label for="email">Join Esat's Newsletter:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email">
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <br><br>
+
+  <!-- Add to cart button -->
+  <button class="button" id="button-cart">Add Galatasaray Jersey to Cart</button>
+
+  <script>
+    document.getElementById("button-cart").addEventListener("click", function () {
+      dataLayer.push({
+        event: "add_to_cart",
+        ecommerce: {
+          currency: "EUR",
+          value: 49.99,
+          items: [{
+            item_id: "gs_jersey_2025",
+            item_name: "Galatasaray Jersey 2025",
+            item_category: "Football Shirts",
+            price: 49.99,
+            quantity: 1
+          }]
+        }
+      });
+      alert("Added to cart!");
+    });
+  </script>
+
+  <br><br>
+  <a href="purchase.html">Go to purchase page →</a>
 </body>
 </html>
