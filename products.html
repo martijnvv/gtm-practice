@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Catalog – Esat's Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Enhanced Ecommerce Events -->
+  <!-- GTM -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T8SJMB2J');</script>
+
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    // view_item_list on page load
+    window.dataLayer.push({
+      event: "view_item_list",
+      ecommerce: {
+        item_list_id: "homepage_list",
+        item_list_name: "Featured Products",
+        items: [
+          {
+            item_id: "gs_jersey_2025",
+            item_name: "Home Jersey 2025",
+            item_category: "Football Shirts",
+            index: 0
+          },
+          {
+            item_id: "gs_away_2025",
+            item_name: "Away Jersey 2025",
+            item_category: "Football Shirts",
+            index: 1
+          },
+          {
+            item_id: "gs_scarf_2025",
+            item_name: "Fan Scarf",
+            item_category: "Accessories",
+            index: 2
+          }
+        ]
+      }
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #a51c30;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+      width: 220px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .product-card h2 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+      color: #a51c30;
+    }
+    .price {
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #ffc20e;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #222;
+    }
+    .btn:hover {
+      background-color: #ffb100;
+    }
+    footer {
+      text-align: center;
+      margin: 60px 0 20px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Esat's Galatasaray Shop 🦁</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="purchase.html">Purchase</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Our Products</h2>
+    <div class="grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Galatasaray_2021_jersey.png/400px-Galatasaray_2021_jersey.png" alt="Home Jersey">
+        <h2>Home Jersey 2025</h2>
+        <div class="price">€49.99</div>
+        <a href="product.html" class="btn"
+           onclick="dataLayer.push({
+             event: 'select_item',
+             ecommerce: {
+               item_list_id: 'homepage_list',
+               item_list_name: 'Featured Products',
+               items: [{
+                 item_id: 'gs_jersey_2025',
+                 item_name: 'Home Jersey 2025',
+                 item_category: 'Football Shirts',
+                 index: 0
+               }]
+             }
+           });">
+          View Product
+        </a>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Galatasaray_Away_Jersey.png/400px-Galatasaray_Away_Jersey.png" alt="Away Jersey">
+        <h2>Away Jersey 2025</h2>
+        <div class="price">€49.99</div>
+        <a href="#" class="btn">Coming Soon</a>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Galatasaray_Scarf.png/400px-Galatasaray_Scarf.png" alt="Scarf">
+        <h2>Fan Scarf</h2>
+        <div class="price">€14.99</div>
+        <a href="#" class="btn">Coming Soon</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2025 Esat's Practice Shop</footer>
+</body>
+</html>
