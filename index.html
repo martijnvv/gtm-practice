@@ -2,192 +2,248 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Galatasaray Jersey – Product Page</title>
+  <title>Margherita Pizza – Roman's Pizza Shop</title>
+
   <!-- GTM -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-T8SJMB2J');</script>
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event:'gtm.js'
+      });
+      var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T8SJMB2J');
+  </script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
+
     window.dataLayer.push({
       event: "view_item",
       ecommerce: {
+        currency: "EUR",
+        value: 12.99,
         items: [{
-          item_id: "gs_jersey_2025",
-          item_name: "Galatasaray Jersey 2025",
-          item_category: "Football Shirts",
-          item_bgbcat: '1234ZA',
-          price: 49.99
+          item_id: "pizza_margherita",
+          item_name: "Margherita Pizza",
+          item_category: "Pizza",
+          item_bgbcat: "PIZZA01",
+          price: 12.99,
+          quantity: 1
         }]
       }
     });
   </script>
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-<style>
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
-  }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
 
-  header {
-    background-color: #a51c30; /* Galatasaray red */
-    padding: 20px;
-    color: white;
-    text-align: center;
-  }
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fffaf2;
+      margin: 0;
+      padding: 0;
+      color: #2d2926;
+    }
 
-  nav a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-  }
+    header {
+      background-color: #b72c24;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
 
-  .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  }
+    header h1 {
+      margin: 0 0 15px;
+    }
 
-  h1 {
-    color: #fff;
-  }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-  button, .btn {
-    display: inline-block;
-    padding: 12px 20px;
-    font-size: 16px;
-    background-color: #ffc20e; /* Gala yellow */
-    border: none;
-    border-radius: 5px;
-    color: #222;
-    cursor: pointer;
-    margin-top: 10px;
-    font-weight: bold;
-    text-decoration: none;
-  }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-  button:hover, .btn:hover {
-    background-color: #ffb100;
-  }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
 
-  .price {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-  }
+    .product-title {
+      color: #b72c24;
+      margin-top: 0;
+    }
 
-  input[type="email"] {
-    padding: 10px;
-    font-size: 16px;
-    width: 60%;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+    .product-image {
+      max-width: 450px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
 
-  footer {
-    text-align: center;
-    margin: 60px 0 20px;
-    color: #999;
-  }
-</style>  
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px 0 10px;
+      color: #2f7d32;
+    }
+
+    button,
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #2f7d32;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    button:hover,
+    .btn:hover {
+      background-color: #256428;
+    }
+
+    .story {
+      margin-top: 50px;
+      padding-top: 25px;
+      border-top: 1px solid #eee;
+    }
+
+    .story h2 {
+      color: #b72c24;
+    }
+
+    footer {
+      text-align: center;
+      margin: 60px 0 20px;
+      color: #999;
+    }
+  </style>
 </head>
+
 <body>
-  <header>
-  <h1>Esat's Galatasaray Shop 🦁</h1>
+
+<header>
+  <h1>Roman's Pizza Shop 🍕</h1>
+
   <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="cart.html">Cart</a>
-      <a href="purchase.html">Purchase</a>
-      <a href="https://www.galatasaray.org/en/Homepage">Official website Gala</a>
+    <a href="index.html">Home</a>
+    <a href="products.html">Pizzas</a>
+    <a href="cart.html">Cart</a>
+    <a href="purchase.html">Purchase</a>
   </nav>
 </header>
 
 <div class="container">
-  <h1>Galatasaray Jersey 2025</h1>
-  <img src="https://3.bp.blogspot.com/-9aWf935_4Uc/VbCUgc7lAqI/AAAAAAAAnZw/Vf864WMZd5k/s1600/Nike-Galatasaray-15-16-Kit%2B%25282%2529.jpg" 
-       alt="Galatasaray Jersey 2025" 
-       style="max-width: 300px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-  
-  <p class="price">€49.99</p>
-  <p>Official home shirt for the 2025 season. Show your loyalty with pride!</p>
 
-  <button id="add-to-cart">Add to Cart</button>
+  <h1 class="product-title">Margherita Pizza 🍅</h1>
+
+  <img
+    class="product-image"
+    src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80"
+    alt="Margherita Pizza"
+  >
+
+  <p class="price">€12.99</p>
+
+  <p>
+    A classic Italian pizza with tomato sauce, fresh mozzarella,
+    basil and a drizzle of extra virgin olive oil.
+  </p>
+
+  <button id="add-to-cart">
+    Add to Cart
+  </button>
+
   <br><br>
-  <a href="cart.html" class="btn">Go to Cart →</a>
-<h1 style="color: black;">De Historie van Galatasaray Spor Kulübü</h1>
 
-    <p>Galatasaray Spor Kulübü, vaak simpelweg Galatasaray genoemd, is een van de meest prestigieuze en succesvolle sportclubs van Turkije. De club werd opgericht op 20 oktober 1905 door Ali Sami Yen en zijn medestudenten aan het Galatasaray Lisesi (Galatasaray Lyceum), een van de oudste en meest vooraanstaande middelbare scholen van Istanbul. Galatasaray werd niet alleen opgericht als voetbalclub, maar als sportvereniging met een bredere ambitie: de Turkse jeugd fysiek en moreel sterker maken.</p>
+  <a href="cart.html" class="btn">
+    Go to Cart →
+  </a>
 
-    <h2>De Oprichting en Vroege Jaren (1905-1923)</h2>
-    <p>De club begon zijn activiteiten onder eenvoudige omstandigheden. In het Ottomaanse Rijk was voetbal destijds een sport die vooral door buitenlanders werd gespeeld, met name door Britten en Grieken in Istanbul. Galatasaray was de eerste Turkse club die het opnam tegen deze teams. Al snel begon de club met succes deel te nemen aan de Istanbul Football League, waarin ze hun eerste kampioenschap veroverden in het seizoen 1908-1909. In de jaren tot aan de oprichting van de Turkse Republiek in 1923, werd Galatasaray al een symbool van nationale trots en Turkse identiteit.</p>
+  <div class="story">
+    <h2>Why Roman's Pizza?</h2>
 
-    <h2>Professionalisering en Succes in de Nationale Competitie (1923-1960)</h2>
-    <p>Na de oprichting van de Turkse Republiek in 1923 kreeg sport een meer gestructureerde en officiële rol in de samenleving. Galatasaray speelde een belangrijke rol in het organiseren en deelnemen aan de nieuw gevormde nationale voetbalstructuren. In 1959 werd de professionele Turkse Süper Lig opgericht. Galatasaray was uiteraard een van de oprichters en is sindsdien onafgebroken actief gebleven in de hoogste divisie, zonder ooit te degraderen.</p>
+    <p>
+      At Roman's Pizza Shop we keep things simple: great dough,
+      quality ingredients and plenty of heat.
+    </p>
 
-    <p>In deze periode begon Galatasaray met het aantrekken van buitenlandse coaches en het professionaliseren van de spelersgroep. De club veroverde meerdere nationale bekers en kampioenschappen en begon ook naam te maken in Europese wedstrijden, hoewel de echte doorbraak nog even op zich liet wachten.</p>
+    <h2>Fresh Dough</h2>
 
-    <h2>De Gouden Jaren: 1960-1980</h2>
-    <p>Onder leiding van legendarische trainers zoals Gündüz Kılıç en later Coşkun Özarı, beleefde Galatasaray een gouden tijdperk. Het team won drie opeenvolgende Süper Lig-titels van 1968 tot 1971. In deze periode begon de club ook te investeren in haar infrastructuur. Het Ali Sami Yen Stadion, vernoemd naar de oprichter van de club, werd de vaste thuisbasis en kreeg een iconische status onder de fans, ook wel bekend als de "Hellemond" vanwege de vurige sfeer die er heerste.</p>
+    <p>
+      Our pizza dough is prepared in advance and left to slowly
+      ferment, creating a light crust with plenty of flavour.
+    </p>
 
-    <p>Ook in basketbal, volleybal en atletiek boekte Galatasaray successen. De club had vanaf het begin de missie om een multisportorganisatie te zijn, en dat werd in deze jaren steeds beter zichtbaar.</p>
+    <h2>Italian Ingredients</h2>
 
-    <h2>Europese Ambities en Glorie: 1980-2000</h2>
-    <p>Vanaf de jaren 80 begon Galatasaray zich sterker te profileren in Europa. In het seizoen 1988-1989 bereikte de club de halve finale van de Europa Cup I (nu de Champions League), waar het verloor van Steaua Boekarest. Dit was een van de grootste prestaties van een Turkse club tot dan toe.</p>
+    <p>
+      Our Margherita combines tomato sauce, mozzarella and fresh basil
+      to create one of the simplest and most famous pizzas in the world.
+    </p>
 
-    <p>Het absolute hoogtepunt kwam echter in het jaar 2000. Onder leiding van coach Fatih Terim en met sterspelers als Gheorghe Hagi, Hakan Şükür, Taffarel, en Bülent Korkmaz, won Galatasaray de UEFA Cup door in de finale Arsenal te verslaan na strafschoppen. Hiermee werd Galatasaray de eerste – en tot op heden enige – Turkse club die een grote Europese beker wist te winnen. Kort daarna versloeg de club ook Real Madrid in de UEFA Super Cup.</p>
+    <h2>Baked Hot</h2>
 
-    <h2>De Dominantie in de 21e Eeuw</h2>
-    <p>Na het succes in 2000 kende de club zowel pieken als dalen. In de jaren 2000-2010 kende Galatasaray periodes van wederopbouw, maar ook verschillende kampioenschappen. Een belangrijke ontwikkeling was de verhuizing naar het nieuwe stadion, het Türk Telekom Arena (nu RAMS Park genoemd), dat in 2011 werd geopend en een moderne thuisbasis werd voor de club.</p>
+    <p>
+      Every pizza is baked at high temperature to create a crisp
+      exterior while keeping the inside soft and airy.
+    </p>
+  </div>
 
-    <p>Fatih Terim keerde meerdere keren terug als trainer en leidde de club naar nieuwe successen, waaronder de Süper Lig-titels in 2012, 2013, 2015, 2018 en 2019. Ook werd de club regelmatig kampioen in de Türkiye Kupası (Turkse beker) en de Süper Kupa.</p>
-
-    <h2>Culturele Impact en Fanatisme</h2>
-    <p>Galatasaray is meer dan een voetbalclub. De club is diep geworteld in de Turkse cultuur en heeft miljoenen trouwe fans, bekend als de "Cim Bom" of "Aslanlar" (de Leeuwen). De derby's tegen Fenerbahçe en Beşiktaş behoren tot de heetst bevochten en meest gepassioneerde wedstrijden ter wereld. De rivaliteit tussen Galatasaray en Fenerbahçe, in het bijzonder, is berucht en wordt vaak omschreven als een van de heftigste in de voetbalwereld.</p>
-
-    <p>De club staat ook bekend om zijn sociaal-maatschappelijke betrokkenheid. Via de Galatasaray Foundation ondersteunt de club educatieve en sociale projecten. Daarnaast blijft de band met het Galatasaray Lyceum sterk: elk jaar worden studenten verwelkomd bij clubactiviteiten, en alumni van de school zijn vaak betrokken bij het bestuur van de club.</p>
-
-    <h2>Galatasaray Vandaag de Dag</h2>
-    <p>In het seizoen 2022-2023 keerde Galatasaray terug naar de top met het winnen van het 23e landskampioenschap. De club bleef ambitieus op de transfermarkt en trok spelers aan met internationale allure. Galatasaray blijft een vaste deelnemer aan Europese competities en blijft bouwen aan haar merk, zowel binnen als buiten Turkije.</p>
-
-    <p>Met een rijke geschiedenis van meer dan 100 jaar is Galatasaray een icoon in het Turkse en internationale voetbal. De club combineert sportieve ambitie met een diepe traditie en blijft voor miljoenen mensen een bron van trots, identiteit en passie.</p>
-
-    <h2>Een Weetje: De Oorsprong van de Naam</h2>
-    <p>Wist je dat de naam "Galatasaray" afkomstig is van de wijk Galata in Istanbul, waar het beroemde Galatasaray Lyceum is gevestigd? De naam betekent letterlijk "Galata Paleis" en verwijst naar de historische school die de club voortbracht. Tot op de dag van vandaag blijft die educatieve wortel een uniek aspect van de clubidentiteit.</p>
-  
 </div>
-<footer>© 2025 <a href="https://www.linkedin.com/in/esatb%C3%BCy%C3%BCkeken/" title="Linkedin">Esat's</a> Practice Shop</footer>
-    <script>
-    document.getElementById("add-to-cart").addEventListener("click", function () {
+
+<footer>
+  © 2026 Roman's Practice Pizza Shop
+</footer>
+
+<script>
+  document
+    .getElementById("add-to-cart")
+    .addEventListener("click", function () {
+
       dataLayer.push({
         event: "add_to_cart",
         ecommerce: {
           currency: "EUR",
-          value: 49.99,
+          value: 12.99,
           items: [{
-            item_id: "gs_jersey_2025",
-            item_name: "Galatasaray Jersey 2025",
-            item_category: "Football Shirts",
-            price: 49.99,
-            item_bgbcat: '1234ZA',
+            item_id: "pizza_margherita",
+            item_name: "Margherita Pizza",
+            item_category: "Pizza",
+            item_bgbcat: "PIZZA01",
+            price: 12.99,
             quantity: 1
           }]
         }
       });
-      alert("Added to cart!");
+
+      alert("Pizza added to cart! 🍕");
     });
-  </script>
+</script>
+
 </body>
 </html>
