@@ -1,128 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <title>Your Cart</title>
+
+  <title>Your Cart – Roman's Pizza Shop</title>
+
   <!-- GTM -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-T8SJMB2J');</script>
-    <script>
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event:'gtm.js'
+      });
+      var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T8SJMB2J');
+  </script>
+
+  <script>
     window.dataLayer = window.dataLayer || [];
+
     window.dataLayer.push({
       event: "view_cart",
       ecommerce: {
+        currency: "EUR",
+        value: 12.99,
         items: [{
-          item_id: "gs_jersey_2025",
-          item_name: "Galatasaray Jersey 2025",
-          item_category: "Football Shirts",
-          price: 49.99,
-          item_bgbcat: '1234ZA',
+          item_id: "pizza_margherita",
+          item_name: "Margherita Pizza",
+          item_category: "Pizza",
+          price: 12.99,
+          item_bgbcat: "PIZZA01",
           quantity: 1
         }]
       }
     });
   </script>
-  <!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-<style>
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
-  }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
 
-  header {
-    background-color: #a51c30; /* Galatasaray red */
-    padding: 20px;
-    color: white;
-    text-align: center;
-  }
+  <style>
 
-  nav a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-  }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fffaf2;
+      margin: 0;
+      padding: 0;
+      color: #2d2926;
+    }
 
-  .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  }
+    header {
+      background-color: #b72c24;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
 
-  h1 {
-    color: #fff;
-  }
+    header h1 {
+      margin: 0 0 15px;
+    }
 
-  button, .btn {
-    display: inline-block;
-    padding: 12px 20px;
-    font-size: 16px;
-    background-color: #ffc20e; /* Gala yellow */
-    border: none;
-    border-radius: 5px;
-    color: #222;
-    cursor: pointer;
-    margin-top: 10px;
-    font-weight: bold;
-    text-decoration: none;
-  }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-  button:hover, .btn:hover {
-    background-color: #ffb100;
-  }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-  .price {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-  }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
 
-  input[type="email"] {
-    padding: 10px;
-    font-size: 16px;
-    width: 60%;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+    .container h1 {
+      color: #b72c24;
+    }
 
-  footer {
-    text-align: center;
-    margin: 60px 0 20px;
-    color: #999;
-  }
-</style>
+    .cart-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .cart-item img {
+      width: 130px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2f7d32;
+    }
+
+    .total {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 25px;
+    }
+
+    button,
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #2f7d32;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      margin-top: 15px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    button:hover,
+    .btn:hover {
+      background-color: #256428;
+    }
+
+    footer {
+      text-align: center;
+      margin: 60px 0 20px;
+      color: #999;
+    }
+
+  </style>
 
 </head>
+
 <body>
-  <header>
-  <h1>Esat's Galatasaray Shop 🦁</h1>
+
+<header>
+
+  <h1>Roman's Pizza Shop 🍕</h1>
+
   <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="cart.html">Cart</a>
-      <a href="purchase.html">Purchase</a>
+    <a href="index.html">Home</a>
+    <a href="products.html">Pizzas</a>
+    <a href="cart.html">Cart</a>
+    <a href="purchase.html">Purchase</a>
   </nav>
+
 </header>
 
-<div class="container">
-  <h1>Your Cart</h1>
-  <p>Galatasaray Jersey 2025 – €49.99 × 1</p>
-  <p>Total: €49.99</p>
 
-  <a href="purchase.html" id="checkout-button">Proceed to Checkout</a>
+<div class="container">
+
+  <h1>Your Cart 🛒</h1>
+
+  <div class="cart-item">
+
+    <img
+      src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=500&q=80"
+      alt="Margherita Pizza"
+    >
+
+    <div>
+
+      <h2>Margherita Pizza</h2>
+
+      <p>
+        Quantity: 1
+      </p>
+
+      <p class="price">
+        €12.99
+      </p>
+
+    </div>
+
+  </div>
+
+  <p class="total">
+    Total: €12.99
+  </p>
+
+  <a
+    href="purchase.html"
+    id="checkout-button"
+    class="btn"
+  >
+    Proceed to Checkout →
+  </a>
+
 </div>
-<footer>© 2025 Esat's Practice Shop</footer>  
+
+
+<footer>
+  © 2026 Roman's Practice Pizza Shop
+</footer>
+
 </body>
 </html>
