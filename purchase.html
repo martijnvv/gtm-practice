@@ -1,133 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <title>Purchase Complete – Esat</title>
+
+  <title>Purchase Complete – Roman's Pizza Shop</title>
+
   <!-- GTM -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-T8SJMB2J');</script>
-   <script>
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event:'gtm.js'
+      });
+      var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T8SJMB2J');
+  </script>
+
+  <script>
+
     window.dataLayer = window.dataLayer || [];
+
     window.dataLayer.push({
       event: "purchase",
       ecommerce: {
-        transaction_id: "ESAT123456",
+
+        transaction_id: "ROMAN123456",
+
         currency: "EUR",
-        value: 49.87,
-        tax: 4.99,
-        shipping: 5.00,
-        transaction_discount: 0.12,
-        transaction_type: 'iDeal',
+
+        value: 12.99,
+
+        tax: 1.07,
+
+        shipping: 2.50,
+
+        transaction_discount: 0,
+
+        transaction_type: "iDeal",
+
         items: [{
-          item_id: "gs_jersey_2025",
-          item_name: "Galatasaray Jersey 2025",
-          item_category: "Football Shirts",
-          item_bgbcat: '1234ZA',
-          price: 49.99,
+          item_id: "pizza_margherita",
+          item_name: "Margherita Pizza",
+          item_category: "Pizza",
+          item_bgbcat: "PIZZA01",
+          price: 12.99,
           quantity: 1
         }]
+
       }
     });
+
   </script>
-  <!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-<style>
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
-  }
 
-  header {
-    background-color: #a51c30; /* Galatasaray red */
-    padding: 20px;
-    color: white;
-    text-align: center;
-  }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
 
-  nav a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-  }
 
-  .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  }
+  <style>
 
-  h1 {
-    color: #fff;
-  }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fffaf2;
+      margin: 0;
+      padding: 0;
+      color: #2d2926;
+    }
 
-  button, .btn {
-    display: inline-block;
-    padding: 12px 20px;
-    font-size: 16px;
-    background-color: #ffc20e; /* Gala yellow */
-    border: none;
-    border-radius: 5px;
-    color: #222;
-    cursor: pointer;
-    margin-top: 10px;
-    font-weight: bold;
-    text-decoration: none;
-  }
+    header {
+      background-color: #b72c24;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
 
-  button:hover, .btn:hover {
-    background-color: #ffb100;
-  }
+    header h1 {
+      margin: 0 0 15px;
+    }
 
-  .price {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-  }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-  input[type="email"] {
-    padding: 10px;
-    font-size: 16px;
-    width: 60%;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-  footer {
-    text-align: center;
-    margin: 60px 0 20px;
-    color: #999;
-  }
-</style>
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .container h1 {
+      color: #b72c24;
+      font-size: 32px;
+    }
+
+    .pizza-icon {
+      font-size: 70px;
+      margin: 20px;
+    }
+
+    .order-number {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #fff7e6;
+      border-radius: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #2f7d32;
+      border-radius: 6px;
+      color: white;
+      margin-top: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #256428;
+    }
+
+    footer {
+      text-align: center;
+      margin: 60px 0 20px;
+      color: #999;
+    }
+
+  </style>
+
 </head>
+
+
 <body>
-  <header>
-  <h1>Esat's Galatasaray Shop 🦁</h1>
+
+<header>
+
+  <h1>Roman's Pizza Shop 🍕</h1>
+
   <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="cart.html">Cart</a>
-      <a href="purchase.html">Purchase</a>
+    <a href="index.html">Home</a>
+    <a href="products.html">Pizzas</a>
+    <a href="cart.html">Cart</a>
+    <a href="purchase.html">Purchase</a>
   </nav>
+
 </header>
+
 
 <div class="container">
 
-  <h1>🎉 Thank you for your purchase, Esat!</h1>
-  <p>Your Galatasaray jersey is on its way. 🔥</p>
-  <a href="index.html">← Back to homepage</a>
+  <div class="pizza-icon">
+    🍕
+  </div>
+
+  <h1>
+    Thank you for your order, Roman!
+  </h1>
+
+  <p>
+    Your Margherita Pizza is being prepared.
+  </p>
+
+  <p>
+    Our pizza chefs are firing up the oven. 🔥
+  </p>
+
+  <div class="order-number">
+
+    <strong>
+      Order: ROMAN123456
+    </strong>
+
+    <br><br>
+
+    Margherita Pizza × 1
+
+    <br>
+
+    €12.99
+
+  </div>
+
+  <a href="products.html" class="btn">
+    Order another pizza 🍕
+  </a>
+
 </div>
-<footer>© 2025 Esat's Practice Shop</footer>  
+
+
+<footer>
+  © 2026 Roman's Practice Pizza Shop
+</footer>
+
 </body>
 </html>
