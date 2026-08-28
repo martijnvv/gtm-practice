@@ -1,44 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
-  <title>Product Catalog – Esat's Shop</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Pizza Menu – Roman's Pizza Shop</title>
 
-  <!-- Enhanced Ecommerce Events -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
+
   <!-- GTM -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-T8SJMB2J');</script>
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event:'gtm.js'
+      });
+      var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T8SJMB2J');
+  </script>
 
-    <script>
+  <script>
     window.dataLayer = window.dataLayer || [];
 
-    // view_item_list on page load
     window.dataLayer.push({
       event: "view_item_list",
       ecommerce: {
-        item_list_id: "homepage_list",
-        item_list_name: "Featured Products",
+        item_list_id: "pizza_menu",
+        item_list_name: "Featured Pizzas",
         items: [
           {
-            item_id: "gs_jersey_2025",
-            item_name: "Home Jersey 2025",
-            item_category: "Football Shirts",
+            item_id: "pizza_margherita",
+            item_name: "Margherita Pizza",
+            item_category: "Pizza",
+            price: 12.99,
             index: 0
           },
           {
-            item_id: "gs_away_2025",
-            item_name: "Away Jersey 2025",
-            item_category: "Football Shirts",
+            item_id: "pizza_pepperoni",
+            item_name: "Pepperoni Pizza",
+            item_category: "Pizza",
+            price: 14.99,
             index: 1
           },
           {
-            item_id: "gs_scarf_2025",
-            item_name: "Fan Scarf",
-            item_category: "Accessories",
+            item_id: "pizza_quattro_formaggi",
+            item_name: "Quattro Formaggi",
+            item_category: "Pizza",
+            price: 15.99,
             index: 2
           }
         ]
@@ -49,69 +65,96 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #fffaf2;
       margin: 0;
       padding: 0;
-      color: #333;
+      color: #2d2926;
     }
+
     header {
-      background-color: #a51c30;
+      background-color: #b72c24;
       padding: 20px;
       color: white;
       text-align: center;
     }
+
     nav a {
       margin: 0 10px;
       color: white;
       text-decoration: none;
       font-weight: 600;
     }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     .container {
       max-width: 1000px;
       margin: 40px auto;
       padding: 20px;
     }
+
+    .container > h2 {
+      text-align: center;
+      font-size: 30px;
+      color: #b72c24;
+    }
+
     .grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 25px;
       justify-content: center;
     }
+
     .product-card {
       background: white;
-      border-radius: 8px;
+      border-radius: 12px;
       padding: 15px;
-      width: 220px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      width: 250px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
       text-align: center;
     }
+
     .product-card img {
       width: 100%;
-      height: auto;
-      border-radius: 5px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
     }
+
     .product-card h2 {
-      font-size: 18px;
-      margin: 10px 0 5px;
-      color: #a51c30;
+      font-size: 19px;
+      margin: 15px 0 5px;
+      color: #b72c24;
     }
+
     .price {
       color: #333;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin: 10px 0;
+      font-size: 18px;
     }
+
     .btn {
       display: inline-block;
       padding: 10px 15px;
-      background-color: #ffc20e;
-      border-radius: 5px;
+      background-color: #2f7d32;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-      color: #222;
+      color: white;
     }
+
     .btn:hover {
-      background-color: #ffb100;
+      background-color: #256428;
     }
+
+    .disabled {
+      background-color: #aaa;
+    }
+
     footer {
       text-align: center;
       margin: 60px 0 20px;
@@ -119,62 +162,115 @@
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Esat's Galatasaray Shop 🦁</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="cart.html">Cart</a>
-      <a href="purchase.html">Purchase</a>
-    </nav>
-  </header>
+<header>
+  <h1>Roman's Pizza Shop 🍕</h1>
 
-  <div class="container">
-    <h2>Our Products</h2>
-    <div class="grid">
-      <!-- Product 1 -->
-      <div class="product-card">
-        <img src="https://3.bp.blogspot.com/-9aWf935_4Uc/VbCUgc7lAqI/AAAAAAAAnZw/Vf864WMZd5k/s1600/Nike-Galatasaray-15-16-Kit%2B%25282%2529.jpg" alt="Home Jersey">
-        <h2>Home Jersey 2025</h2>
-        <div class="price">€49.99</div>
-        <a href="index.html" class="btn"
-           onclick="dataLayer.push({
-             event: 'select_item',
-             ecommerce: {
-               item_list_id: 'homepage_list',
-               item_list_name: 'Featured Products',
-               items: [{
-                 item_id: 'gs_jersey_2025',
-                 item_name: 'Home Jersey 2025',
-                 item_category: 'Football Shirts',
-                 index: 0
-               }]
-             }
-           });">
-          View Product
-        </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Pizzas</a>
+    <a href="cart.html">Cart</a>
+    <a href="purchase.html">Purchase</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <h2>Our Pizzas</h2>
+
+  <div class="grid">
+
+    <!-- Pizza 1 -->
+
+    <div class="product-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80"
+        alt="Margherita Pizza"
+      >
+
+      <h2>Margherita Pizza</h2>
+
+      <div class="price">
+        €12.99
       </div>
 
-      <!-- Product 2 -->
-      <div class="product-card">
-        <img src="https://footsoccerpro.co/wp-content/uploads/2024/07/Maillot-Galatasaray-Exterieur-2024-2025.jpg" alt="Away Jersey">
-        <h2>Away Jersey 2025</h2>
-        <div class="price">€49.99</div>
-        <a href="#" class="btn">Coming Soon</a>
-      </div>
+      <a
+        href="index.html"
+        class="btn"
+        onclick="dataLayer.push({
+          event: 'select_item',
+          ecommerce: {
+            item_list_id: 'pizza_menu',
+            item_list_name: 'Featured Pizzas',
+            items: [{
+              item_id: 'pizza_margherita',
+              item_name: 'Margherita Pizza',
+              item_category: 'Pizza',
+              price: 12.99,
+              index: 0
+            }]
+          }
+        });"
+      >
+        View Pizza
+      </a>
 
-      <!-- Product 3 -->
-      <div class="product-card">
-        <img src="https://www.soccerbox.com/media/catalog/product/cache/e5c18d5f608fefb2b3ef83fcb1922b34/g/a/galatasaray-jacquard-scarf.jpg" alt="Scarf">
-        <h2>Fan Scarf</h2>
-        <div class="price">€14.99</div>
-        <a href="#" class="btn">Coming Soon</a>
-      </div>
     </div>
+
+
+    <!-- Pizza 2 -->
+
+    <div class="product-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=700&q=80"
+        alt="Pepperoni Pizza"
+      >
+
+      <h2>Pepperoni Pizza</h2>
+
+      <div class="price">
+        €14.99
+      </div>
+
+      <a href="#" class="btn disabled">
+        Coming Soon
+      </a>
+
+    </div>
+
+
+    <!-- Pizza 3 -->
+
+    <div class="product-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=80"
+        alt="Quattro Formaggi Pizza"
+      >
+
+      <h2>Quattro Formaggi</h2>
+
+      <div class="price">
+        €15.99
+      </div>
+
+      <a href="#" class="btn disabled">
+        Coming Soon
+      </a>
+
+    </div>
+
   </div>
 
-  <footer>© 2025 Esat's Practice Shop</footer>
+</div>
+
+<footer>
+  © 2026 Roman's Practice Pizza Shop
+</footer>
+
 </body>
 </html>
