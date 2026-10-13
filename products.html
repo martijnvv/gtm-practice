@@ -73,14 +73,18 @@
       });
     }
     const grid = document.getElementById('pizza-grid');
-    const observer = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        observer.unobserve(entry.target);
-        const index = Number(entry.target.dataset.index);
-        trackItemEvent('view_item_list', pizzas[index], index);
+    function trackListImpression() {
+      window.dataLayer.push({ecommerce:null});
+      window.dataLayer.push({
+        event:'view_item_list',
+        currency:CURRENCY,
+        ecommerce:{
+          item_list_id:LIST.id,
+          item_list_name:LIST.name,
+          items:pizzas.map((pizza,index) => itemPayload(pizza,index))
+        }
       });
-    }, {threshold:0.5}) : null;
+    }
 
     pizzas.forEach((pizza,index) => {
       const card = document.createElement('article');
@@ -107,9 +111,9 @@
       });
       card.append(img,heading,price,button);
       grid.appendChild(card);
-      if (observer) observer.observe(card);
-      else trackItemEvent('view_item_list',pizza,index);
     });
+    // One impression event with all menu items in a single items array.
+    trackListImpression();
   </script>
 </body>
 </html>
