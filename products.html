@@ -1,268 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pizza Menu – Roman's Pizza Shop</title>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- GTM -->
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TS4ZZQG3');</script>
-<!-- End Google Tag Manager -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    window.dataLayer.push({
-      event: "view_item_list",
-      ecommerce: {
-        item_list_id: "pizza_menu",
-        item_list_name: "Featured Pizzas",
-        items: [
-          {
-            item_id: "pizza_margherita",
-            item_name: "Margherita Pizza",
-            item_category: "Pizza",
-            price: 12.99,
-            index: 0
-          },
-          {
-            item_id: "pizza_pepperoni",
-            item_name: "Pepperoni Pizza",
-            item_category: "Pizza",
-            price: 14.99,
-            index: 1
-          },
-          {
-            item_id: "pizza_quattro_formaggi",
-            item_name: "Quattro Formaggi",
-            item_category: "Pizza",
-            price: 15.99,
-            index: 2
-          }
-        ]
-      }
-    });
   </script>
-
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TS4ZZQG3');</script>
+  <!-- End Google Tag Manager -->
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #fffaf2;
-      margin: 0;
-      padding: 0;
-      color: #2d2926;
-    }
-
-    header {
-      background-color: #b72c24;
-      padding: 20px;
-      color: white;
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 10px;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    .container > h2 {
-      text-align: center;
-      font-size: 30px;
-      color: #b72c24;
-    }
-
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-      justify-content: center;
-    }
-
-    .product-card {
-      background: white;
-      border-radius: 12px;
-      padding: 15px;
-      width: 250px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .product-card h2 {
-      font-size: 19px;
-      margin: 15px 0 5px;
-      color: #b72c24;
-    }
-
-    .price {
-      color: #333;
-      font-weight: bold;
-      margin: 10px 0;
-      font-size: 18px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 15px;
-      background-color: #2f7d32;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      color: white;
-    }
-
-    .btn:hover {
-      background-color: #256428;
-    }
-
-    .disabled {
-      background-color: #aaa;
-    }
-
-    footer {
-      text-align: center;
-      margin: 60px 0 20px;
-      color: #999;
-    }
+    body{font-family:'Inter',sans-serif;background:#fffaf2;margin:0;color:#2d2926}
+    header{background:#b72c24;padding:20px;color:#fff;text-align:center}
+    nav a{margin:0 10px;color:#fff;text-decoration:none;font-weight:600}
+    nav a:hover{text-decoration:underline}
+    .container{max-width:1000px;margin:40px auto;padding:20px}
+    .container>h2{text-align:center;font-size:30px;color:#b72c24}
+    .grid{display:flex;flex-wrap:wrap;gap:25px;justify-content:center}
+    .product-card{background:#fff;border-radius:12px;padding:15px;width:250px;box-shadow:0 3px 12px #00000014;text-align:center}
+    .product-card img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+    .product-card h2{font-size:19px;margin:15px 0 5px;color:#b72c24}
+    .price{color:#333;font-weight:bold;margin:10px 0;font-size:18px}
+    .btn{display:inline-block;padding:10px 15px;background:#2f7d32;border:0;border-radius:6px;text-decoration:none;font:inherit;font-weight:bold;color:#fff;cursor:pointer}
+    .btn:hover{background:#256428}
+    .btn.unavailable{background:#aaa;cursor:not-allowed}
+    footer{text-align:center;margin:60px 0 20px;color:#999}
   </style>
 </head>
-
 <body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TS4ZZQG3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <header><h1>Roman's Pizza Shop 🍕</h1><nav><a href="index.html">Home</a><a href="products.html">Pizzas</a><a href="cart.html">Cart</a><a href="purchase.html">Purchase</a></nav></header>
+  <main class="container"><h2>Our Pizzas</h2><div class="grid" id="pizza-grid"></div></main>
+  <footer>© 2026 Roman's Practice Pizza Shop</footer>
+  <script>
+    'use strict';
+    const CURRENCY = 'EUR';
+    const LIST = {id:'pizza_menu', name:'Featured Pizzas'};
+    // Replace this demo catalog with your CMS/API response in production.
+    const pizzas = [
+      {id:'pizza_margherita', name:'Margherita Pizza', category:'Pizza', bgbcat:'PIZZA01', price:12.99, image:'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80'},
+      {id:'pizza_pepperoni', name:'Pepperoni Pizza', category:'Pizza', bgbcat:'PIZZA01', price:14.99, image:'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=700&q=80'},
+      {id:'pizza_quattro_formaggi', name:'Quattro Formaggi', category:'Pizza', bgbcat:'PIZZA01', price:15.99, image:'https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=80'}
+    ];
+    // Demo-only stock assignment: fixed for the current page view.
+    pizzas.forEach(pizza => {pizza.availability = Math.random() < 0.5 ? 'in_stock' : 'coming_soon';});
 
-<header>
-  <h1>Roman's Pizza Shop 🍕</h1>
+    function itemPayload(pizza, index) {
+      return {
+        item_id:pizza.id,
+        item_name:pizza.name,
+        item_category:pizza.category,
+        item_bgbcat:pizza.bgbcat,
+        item_availability:pizza.availability,
+        price:pizza.price,
+        quantity:1,
+        index:index
+      };
+    }
+    function trackItemEvent(eventName, pizza, index) {
+      window.dataLayer.push({ecommerce:null}); // Prevent stale ecommerce data in GTM.
+      window.dataLayer.push({
+        event:eventName,
+        currency:CURRENCY,
+        ...(eventName === 'select_item' ? {value:pizza.price} : {}),
+        ecommerce:{
+          item_list_id:LIST.id,
+          item_list_name:LIST.name,
+          items:[itemPayload(pizza,index)]
+        }
+      });
+    }
+    const grid = document.getElementById('pizza-grid');
+    const observer = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        observer.unobserve(entry.target);
+        const index = Number(entry.target.dataset.index);
+        trackItemEvent('view_item_list', pizzas[index], index);
+      });
+    }, {threshold:0.5}) : null;
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Pizzas</a>
-    <a href="cart.html">Cart</a>
-    <a href="purchase.html">Purchase</a>
-  </nav>
-</header>
-
-<div class="container">
-
-  <h2>Our Pizzas</h2>
-
-  <div class="grid">
-
-    <!-- Pizza 1 -->
-
-    <div class="product-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80"
-        alt="Margherita Pizza"
-      >
-
-      <h2>Margherita Pizza</h2>
-
-      <div class="price">
-        €12.99
-      </div>
-
-      <a
-        href="index.html"
-        class="btn"
-        onclick="dataLayer.push({
-          event: 'select_item',
-          ecommerce: {
-            item_list_id: 'pizza_menu',
-            item_list_name: 'Featured Pizzas',
-            items: [{
-              item_id: 'pizza_margherita',
-              item_name: 'Margherita Pizza',
-              item_category: 'Pizza',
-              price: 12.99,
-              index: 0
-            }]
-          }
-        });"
-      >
-        View Pizza
-      </a>
-
-    </div>
-
-
-    <!-- Pizza 2 -->
-
-    <div class="product-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=700&q=80"
-        alt="Pepperoni Pizza"
-      >
-
-      <h2>Pepperoni Pizza</h2>
-
-      <div class="price">
-        €14.99
-      </div>
-
-      <a href="#" class="btn disabled">
-        Coming Soon
-      </a>
-
-    </div>
-
-
-    <!-- Pizza 3 -->
-
-    <div class="product-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=80"
-        alt="Quattro Formaggi Pizza"
-      >
-
-      <h2>Quattro Formaggi</h2>
-
-      <div class="price">
-        €15.99
-      </div>
-
-      <a href="#" class="btn disabled">
-        Coming Soon
-      </a>
-
-    </div>
-
-  </div>
-
-</div>
-
-<footer>
-  © 2026 Roman's Practice Pizza Shop
-</footer>
-
+    pizzas.forEach((pizza,index) => {
+      const card = document.createElement('article');
+      card.className='product-card';
+      card.dataset.index=String(index);
+      const img=document.createElement('img');
+      img.src=pizza.image;
+      img.alt=pizza.name;
+      img.loading='lazy';
+      const heading=document.createElement('h2');
+      heading.textContent=pizza.name;
+      const price=document.createElement('div');
+      price.className='price';
+      price.textContent=new Intl.NumberFormat('en-IE',{style:'currency',currency:CURRENCY}).format(pizza.price);
+      const button=document.createElement('button');
+      button.type='button';
+      button.className='btn'+(pizza.availability==='coming_soon'?' unavailable':'');
+      button.textContent=pizza.availability==='in_stock'?'View Pizza':'Coming Soon';
+      button.setAttribute('aria-disabled',String(pizza.availability!=='in_stock'));
+      // Keep unavailable controls clickable for analytics; do not use native disabled.
+      button.addEventListener('click',() => {
+        trackItemEvent('select_item',pizza,index);
+        if (pizza.availability==='in_stock') window.location.assign('index.html');
+      });
+      card.append(img,heading,price,button);
+      grid.appendChild(card);
+      if (observer) observer.observe(card);
+      else trackItemEvent('view_item_list',pizza,index);
+    });
+  </script>
 </body>
 </html>
